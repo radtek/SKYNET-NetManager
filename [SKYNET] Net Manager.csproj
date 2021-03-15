@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C39D0748-08CE-4128-9B7C-5DEBC8828270}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkynetManager</RootNamespace>
+    <AssemblyName>[SKYNET] Net Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1 %28111%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Host.cs" />
+    <Compile Include="Class\HostPinger\AsyncHostNameResolver.cs" />
+    <Compile Include="Class\HostPinger\HostPinger.cs" />
+    <Compile Include="Class\HostPinger\HostStatus.cs" />
+    <Compile Include="Class\HostPinger\IPingLogger.cs" />
+    <Compile Include="Class\HostPinger\Delegates.cs" />
+    <Compile Include="Class\HostPinger\IPScanHostState.cs" />
+    <Compile Include="Class\HostPinger\IPScanner.cs" />
+    <Compile Include="Class\HostPinger\IPScanRange.cs" />
+    <Compile Include="Class\HostPinger\PingResultsBuffer.cs" />
+    <Compile Include="Class\ImageHelper.cs" />
+    <Compile Include="Class\Media.cs" />
+    <Compile Include="Class\PortScanner.cs" />
+    <Compile Include="Class\WinMod.cs" />
+    <Compile Include="Class\TcpClient.cs" />
+    <Compile Include="ConnectionStatus.cs" />
+    <Compile Include="Controls\FlatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatTextBox2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HackProgress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HackProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HackProgressIndicator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Metro\IMetroControl.cs" />
+    <Compile Include="Controls\Metro\ListViewColumnSorter.cs" />
+    <Compile Include="Controls\Metro\MetroPaintEventArgs.cs" />
+    <Compile Include="Controls\Metro\MetroPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Metro\MetroScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Metro\MetroTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Metro\SkynListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Metro\SkyProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Metro\WinApi.cs" />
+    <Compile Include="Controls\SkynListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Device.cs" />
+    <Compile Include="DeviceHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeviceHistory.designer.cs">
+      <DependentUpon>DeviceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceManager.cs" />
+    <Compile Include="FlatContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbout.designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSearch.designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeviceInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeviceInfo.designer.cs">
+      <DependentUpon>frmDeviceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfile.designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAlert.designer.cs">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConsole.designer.cs">
+      <DependentUpon>frmConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenu.designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManager.designer.cs">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMessage.designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPortScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPortScan.designer.cs">
+      <DependentUpon>frmPortScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPhoto.designer.cs">
+      <DependentUpon>frmPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddProfile.designer.cs">
+      <DependentUpon>frmAddProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKey.Designer.cs">
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IPScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBack.Designer.cs">
+      <DependentUpon>frmBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Hook.cs" />
+    <Compile Include="Forms\frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageType.cs" />
+    <Compile Include="KeyboardHook\KeyboardHook.cs" />
+    <Compile Include="KeyboardHook\MouseHook.cs" />
+    <Compile Include="Class\LanManager.cs" />
+    <Compile Include="modCommon.cs" />
+    <Compile Include="Class\PingManager.cs" />
+    <Compile Include="PingHistory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\RegistrySettings.cs" />
+    <Compile Include="Controls\ColorSystem.cs" />
+    <Compile Include="Controls\FlatAlertBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatColorPalette.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatMax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatMini.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatNumeric.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\flatRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatStickyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlatTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Helpers.cs" />
+    <Compile Include="Controls\MouseState.cs" />
+    <Compile Include="WakeOnLanAction.cs" />
+    <Compile Include="DeviceBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeviceBox.Designer.cs">
+      <DependentUpon>DeviceBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DeviceHistory.resx">
+      <DependentUpon>DeviceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeviceInfo.resx">
+      <DependentUpon>frmDeviceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAlert.resx">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConsole.resx">
+      <DependentUpon>frmConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmManager.resx">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPortScan.resx">
+      <DependentUpon>frmPortScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPhoto.resx">
+      <DependentUpon>frmPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddProfile.resx">
+      <DependentUpon>frmAddProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKey.resx">
+      <DependentUpon>frmKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IPScanForm.resx">
+      <DependentUpon>IPScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBack.resx">
+      <DependentUpon>frmBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="DeviceBox.resx">
+      <DependentUpon>DeviceBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dota2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dota2Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_sel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_unsel.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Icon_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idlechat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_sel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_unsel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlienWare3 _1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com_facebook_profile_picture_blank_square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statusbar_mobile_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %28111%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OfflinePC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NeutralPC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnlinePC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1 %28111%29.ico" />
+    <Content Include="Positions.txt" />
+    <None Include="Resources\D_Online.png" />
+    <None Include="Resources\D_Offline.png" />
+    <None Include="Resources\Offline.png" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\SkynetManager.png" />
+    <None Include="Resources\pingtools.png" />
+    <None Include="Resources\flixster.png" />
+    <None Include="Resources\1 %28154%29.png" />
+    <None Include="Resources\SearchPing.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\settings_2.png" />
+    <None Include="Resources\spareroom.png" />
+    <None Include="Resources\squarespace_blog.png" />
+    <None Include="Resources\tiny_tunes.png" />
+    <None Include="Resources\wifi_manager.png" />
+    <None Include="Resources\xfinity_my_account.png" />
+    <None Include="Resources\blackboard.png" />
+    <None Include="Resources\blackberry_notes.png" />
+    <None Include="Resources\blackberry_contacts.png" />
+    <None Include="Resources\alcatel_notes.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1 %2812%29.png" />
+    <None Include="Resources\My Computer lime copia.png" />
+    <None Include="Resources\cinemadisplay.png" />
+    <None Include="Resources\glob_v2.png" />
+    <None Include="Resources\globe_48.png" />
+    <None Include="Resources\Icon003.jpg" />
+    <None Include="Resources\keyhole_icon_png.png" />
+    <None Include="Resources\sound-start-record.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
